@@ -1,13 +1,17 @@
 .header {
     background-color: var(--secondary-color);
+}
 
+.header-flex {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-
     padding: 0.5rem 2rem;
     gap: 1rem;
+
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .logo {
@@ -17,7 +21,7 @@
     border-radius: 50%;
 }
 
-.header > h1 {
+.header h1 {
     color: var(--bg-color);
 }
 
@@ -42,7 +46,8 @@
 }
 
 @media (max-width: 800px) {
-    .header {
+    .header-flex {
+        flex-direction: column;
         justify-content: center;
         padding: 2rem 0.5rem;
     }
